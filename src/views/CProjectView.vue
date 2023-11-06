@@ -44,13 +44,13 @@
 </template>
 <style scoped>
 .container{
-    margin:0 100px 100px 0;
+    margin:0 50px 50px 0;
     padding: 0;
     overflow: hidden;
     border-top-right-radius:20% ;
     border-bottom-left-radius:20%;   
-    width:300px;
-    height:300px;
+    width:250px;
+    height:250px;
     position: relative;
     box-shadow: 10px 10px 15px black;    
 }
@@ -84,7 +84,7 @@
     line-height: 60px;
 }
 .content img{
-    height:300px;
-    width: 300px;
+    height:250px;
+    width: 250px;
 }
 </style>
