@@ -8,7 +8,7 @@
                 <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/vue-logo.png"> - Vue3</router-link></li>
             </ul>
         </div>
-        <div class="d-flex flex-wrap justify-content-center align-i" id="router-view">
+        <div class="d-flex flex-wrap justify-content-center" id="router-view">
             <RouterView></RouterView>
         </div>
        
@@ -18,13 +18,14 @@
 <style scoped>
 
 #router-view{
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;    
 }
 #project-menu li{
     list-style: none;    
 }
 
 #project-menu li a{
+    font-size: 0.7rem;
     height: 100%;
     display: block;
     padding:5px 10px;
@@ -36,8 +37,8 @@
 }
 
 #project-menu img{
-    max-width:35px;
-    max-height:35px;
+    max-width:20px;
+    max-height:20px;
 }
 #project-menu ul {
     padding:0;
@@ -51,13 +52,18 @@
     overflow: hidden;  
     min-width: 100%;
     height: fit-content;
-    background-color: rgba(0, 0, 0, 0.3); 
-    margin-right: 100px;
+    background-color: rgba(0, 0, 0, 0.3);    
     margin-bottom: 50px;
 }
 main{
+    padding-top: 50px;
     display: flex;  
     flex-direction: column;  
+}
+@media (min-width:700px) {
+    #project-menu li a{
+    font-size: 1rem;  
+}
 }
 
 @media (min-width:1024px) {
@@ -74,5 +80,12 @@ main{
     #project-menu ul {
         display: block;
     }
+    #project-menu img{
+    max-width:35px;
+    max-height:35px;
+}
+    #project-menu li a{
+    font-size: 0.9rem;  
+}
 }
 </style>

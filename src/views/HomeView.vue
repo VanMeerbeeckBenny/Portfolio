@@ -32,18 +32,11 @@
     margin-bottom: 20px;
   }
 }
-
-@media (max-width: 1920px) {
-
-  .outer-circle{
-    margin-left: 50px;
-  }
-}
 main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height:calc(100vh - 115px);
+  height:calc(100vh - 200px);
 }
 
 .about-header {
