@@ -25,14 +25,14 @@
 }
 
 #project-menu li a{
+    height: 100%;
     display: block;
     padding:5px 10px;
     color:rgba(255, 255, 255, 0.697);
 }
 #project-menu li a:hover{
     background-color: rgba(252, 252, 252, 0.47);
-    color:rgba(0, 0, 0, 0.6);
-    font-weight: bold;
+    color:rgba(0, 0, 0, 0.6);    
 }
 
 #project-menu img{

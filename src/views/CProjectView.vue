@@ -55,8 +55,10 @@
     box-shadow: 10px 10px 15px black;    
 }
 .text-container{
+    padding: 50px;
     text-align: center;
 }
+
 .overlay{
     width: inherit;
     height: inherit;
@@ -79,7 +81,7 @@
     opacity: 0.5;
     font-weight:bold;
     font-style:italic;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
     line-height: 60px;
 }

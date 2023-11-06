@@ -45,7 +45,7 @@ a.nav-link:not(.router-link-active) {
   color: rgb(137, 85, 147);
 }
 
-.nav-link{
+a.nav-link{
   font-family:'Times New Roman', Times, serif;
   letter-spacing: 2px; 
   font-size: 1.1rem;
@@ -55,10 +55,11 @@ header {
   line-height: 60px;
 }
 .custom-toggler {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(137, 85, 147)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(137, 85, 147)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 button.navbar-toggler{
   border:1px solid rgb(137, 85, 147);
+  outline: none;
 }
 
 </style>
