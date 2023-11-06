@@ -7,17 +7,7 @@
             </div>
         </div>
         <div class="content">
-            <img src="../assets/Images/ik.gif">
-        </div>
-    </div>
-    <div class="container">
-        <div class="overlay">
-            <div class="text-container">
-                <p>Blazor</p>                
-            </div>
-        </div>
-        <div class="content">
-            <img src="../assets/Images/ik.gif">
+            <img src="../assets/Images/api-screenshot.PNG" title="API" alt="API" >
         </div>
     </div>
     <div class="container">
@@ -27,35 +17,42 @@
             </div>
         </div>
         <div class="content">
-            <img src="../assets/Images/ik.gif">
+            <img src="../assets/Images/xamarin-screenshot.PNG" title="Memmory helper" alt="Memmory helper">
         </div>
     </div>
     <div class="container">
         <div class="overlay">
             <div class="text-container">
-                <p>Active</p>
-                <p>Directory</p>
+                <p>Blazor</p> 
+                <p>Cricketdarts</p>               
             </div>
         </div>
         <div class="content">
-            <img src="../assets/Images/ik.gif">
+            <img src="../assets/Images/cricketdarts-screenshot.PNG" title="Cricketdarts" alt="Cricketdarts">
+        </div>
+    </div>    
+    <div class="container">
+        <div class="overlay">
+            <div class="text-container">
+                <p>Blazor</p>
+                <p>Spoticlone</p>
+            </div>
+        </div>
+        <div class="content">
+            <img src="../assets/Images/spoticlone-screenshot.PNG" title="Spoti clone" alt="Spoti clone">
         </div>
     </div>
 </template>
 <style scoped>
-.container{
-    margin:0 50px 50px 0;
+.container{    
+    margin: 10px 10px;
     padding: 0;
     overflow: hidden;
-    border-top-right-radius:20% ;
-    border-bottom-left-radius:20%;   
-    width:250px;
-    height:250px;
+    border-radius: 25px; 
     position: relative;
     box-shadow: 10px 10px 15px black;    
 }
-.text-container{
-    padding: 50px;
+.text-container{ 
     text-align: center;
 }
 
@@ -74,19 +71,33 @@
 }
 
 .overlay:hover{
-    opacity: 0;    
+    opacity: 0;  
 }
 
 .overlay p {    
     opacity: 0.5;
     font-weight:bold;
     font-style:italic;
-    font-size: 3.5rem;
-    margin: 0;
-    line-height: 60px;
+    font-size: 1rem;
+    margin: 0;  
 }
-.content img{
+.content img,.container{
+    height:150px;
+    width: 300px;
+}
+
+@media (min-width: 1024px){
+    .content img,.container{
     height:250px;
-    width: 250px;
+    width: 500px;
+  
 }
+    .container{
+        margin: 20px 20px;
+    }
+    .overlay p{
+        font-size: 3.5rem;
+        line-height: 60px;
+    }
+};
 </style>
