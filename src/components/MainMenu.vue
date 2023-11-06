@@ -1,10 +1,12 @@
 <template>
   <header>
-    <div class="d-flex">
-      <div class="left-header"></div>
-      <div class="right-header">
-        <nav class="main-menu">
-          <ul class="nav pb-3">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon custom-toggler"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'home-page' }">Home</router-link>
             </li>
@@ -16,11 +18,11 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'contact-page' }">Contact</router-link>
-            </li>
-          </ul>
-        </nav>
+            </li>            
+          </ul>          
+        </div>
       </div>
-    </div>
+    </nav>    
   </header>
 </template>
 <style scoped>
@@ -43,23 +45,20 @@ a.nav-link:not(.router-link-active) {
   color: rgb(137, 85, 147);
 }
 
-.main-menu a{
+.nav-link{
   font-family:'Times New Roman', Times, serif;
-  letter-spacing: 2px;
- 
+  letter-spacing: 2px; 
   font-size: 1.1rem;
   font-weight: bold;
 }
 header {
   line-height: 60px;
 }
+.custom-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(137, 85, 147)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+button.navbar-toggler{
+  border:1px solid rgb(137, 85, 147);
+}
 
-.left-header,.right-header{
-  width: 50%;  
-}
-.right-header{
-  display: flex;
-  justify-content: end;
-  padding-right: 50px;
-}
 </style>
