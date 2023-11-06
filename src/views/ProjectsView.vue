@@ -8,7 +8,7 @@
                 <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/vue-logo.png"> - Vue3</router-link></li>
             </ul>
         </div>
-        <div class="d-flex flex-wrap" id="router-view">
+        <div class="d-flex flex-wrap justify-content-center align-i" id="router-view">
             <RouterView></RouterView>
         </div>
        
@@ -43,20 +43,36 @@
     padding:0;
     margin:0;
     letter-spacing: 1px;
+    display:flex;
+    justify-content: center;
+    width: 100%;   
 }
 #project-menu{  
     overflow: hidden;  
-    min-width: 150px;
+    min-width: 100%;
     height: fit-content;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.3); 
     margin-right: 100px;
-    
+    margin-bottom: 50px;
 }
 main{
-    display: flex; 
-    padding-top: 50px;
-    
+    display: flex;  
+    flex-direction: column;  
+}
+
+@media (min-width:1024px) {
+    #project-menu{
+        min-width: 150px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    main{
+        flex-direction: row;
+    }
+
+    #project-menu ul {
+        display: block;
+    }
 }
 </style>
