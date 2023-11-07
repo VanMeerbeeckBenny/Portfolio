@@ -2,13 +2,13 @@
     <main >
         <div id="project-menu">
             <ul>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/c-logo.png"> - C#</router-link></li>
-                <li><router-link  :to="{name:'javascript-project-page'}"><img src="/assets/Images/js-logo.png"> - Javascript</router-link></li>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/python-logo.png"> - Python</router-link></li>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/vue-logo.png"> - Vue3</router-link></li>
+                <li><router-link class="csharp"  :to="{name:'c-project-page'}"><img src="/assets/Images/c-logo.png"> - C#</router-link></li>
+                <li><router-link class="javascript" :to="{name:'javascript-project-page'}"><img src="/assets/Images/js-logo.png"> - Javascript</router-link></li>
+                <li><router-link class="python" :to="{name:'python-project-page'}"><img src="/assets/Images/python-logo.png"> - Python</router-link></li>
+                <li><router-link class="vue" :to="{name:'vue-project-page'}"><img src="/assets/Images/vue-logo.png"> - Vue3</router-link></li>
             </ul>
         </div>
-        <div class="d-flex flex-wrap justify-content-center" id="router-view">
+        <div class="d-flex flex-wrap justify-content-center w-100" id="router-view">
             <RouterView></RouterView>
         </div>
        
@@ -16,6 +16,21 @@
 </template>
 
 <style scoped>
+.csharp.router-link-active{
+    background-color: rgba(99, 65, 134, 0.463);
+}
+
+.javascript.router-link-active{
+    background-color: #c2b66482;;
+}
+
+.python.router-link-active{
+    background-color: rgba(100, 152, 194, 0.51);
+}
+
+.vue.router-link-active{
+    background-color: rgba(71, 137, 101, 0.584);
+}
 
 #router-view{
     font-family:'Times New Roman', Times, serif;    
@@ -31,7 +46,7 @@
     padding:5px 10px;
     color:rgba(255, 255, 255, 0.697);
 }
-#project-menu li a:hover{
+#project-menu li a:hover:not(.router-link-active){
     background-color: rgba(252, 252, 252, 0.47);
     color:rgba(0, 0, 0, 0.6);    
 }
