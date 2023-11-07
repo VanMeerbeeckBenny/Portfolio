@@ -4,6 +4,8 @@ import AboutView from '../views/AboutView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 import CProjectView from '../views/CProjectView.vue'
 import javascriptView from '../views/JavaScriptView.vue'
+import pythonView from '../views/PythonProjectView.vue'
+import vueView from '../views/VueProjectView.vue'
 
 
 const router = createRouter({
@@ -32,6 +34,16 @@ const router = createRouter({
         path:'javascript',
         name:'javascript-project-page',
         component:javascriptView,        
+      },
+      {
+        path:'python',
+        name:'python-project-page',
+        component:pythonView,        
+      },
+      {
+        path:'vue',
+        name:'vue-project-page',
+        component:vueView
       }]    
     },
     {
@@ -46,8 +58,7 @@ const router = createRouter({
     // which is lazy-loaded when the route is visited.
     //component: () => import('../views/AboutView.vue')
     //}
-  ],
-
+  ], 
 })
 
 export default router
