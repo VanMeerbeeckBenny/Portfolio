@@ -1,12 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import ProjectsView from '../views/ProjectsView.vue'
-import CProjectView from '../views/CProjectView.vue'
-import javascriptView from '../views/JavaScriptView.vue'
-import pythonView from '../views/PythonProjectView.vue'
-import vueView from '../views/VueProjectView.vue'
-
+//Importing for direct import
+//import HomeView from '../views/HomeView'   
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,36 +8,40 @@ const router = createRouter({
     {
       path: '/',
       name: 'home-page',
-      component: HomeView
+      // This is a lazy loading approach that will only load when needed.
+      component: () => import('../views/HomeView.vue')
+      // Alternatively, you can use: component: HomeView
+      // This will load the component regardless of whether it's needed or not.
+      // Ensure that you have imported the Vue component as shown above.    
     },
     {
       path: '/about',
       name: 'about-page',
-      component: AboutView
+      component: () => import('../views/AboutView.vue')
     },
     {
       path: '/project',
       name: 'project-page',
-      component: ProjectsView,      
+      component: () => import('../views/ProjectsView.vue'),    
       children:[{
         path:'c',
         name:'c-project-page',
-        component:CProjectView
+        component: () => import('../views/CProjectView.vue')
       },
       {
         path:'javascript',
         name:'javascript-project-page',
-        component:javascriptView,        
+        component: () => import('../views/JavaScriptProjectView.vue')        
       },
       {
         path:'python',
         name:'python-project-page',
-        component:pythonView,        
+        component: () => import('../views/PythonProjectView.vue')        
       },
       {
         path:'vue',
         name:'vue-project-page',
-        component:vueView
+        component: () => import('../views/VueProjectView.vue')
       }]    
     },
     {
