@@ -21,15 +21,15 @@
 }
 
 .javascript.router-link-active{
-    background-color: #c2b66482;;
+    background-color: #c2b66469;;
 }
 
 .python.router-link-active{
-    background-color: rgba(100, 152, 194, 0.51);
+    background-color: rgba(100, 152, 194, 0.435);
 }
 
 .vue.router-link-active{
-    background-color: rgba(71, 137, 101, 0.584);
+    background-color: rgba(71, 137, 101, 0.466);
 }
 
 #router-view{

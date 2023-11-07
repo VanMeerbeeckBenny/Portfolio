@@ -47,8 +47,8 @@ defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleCl
 }
 
 .javascript-overlay-color{
-    background-color: #aaa168;
-    color:#323330;
+    background-color: #9a925f;
+    
 }
 
 .python-overlay-color{
