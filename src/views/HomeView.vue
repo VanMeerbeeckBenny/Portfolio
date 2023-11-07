@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="outer-circle">
-          <img src="./../assets/Images/ik.gif" width="300" height="300" />
+          <img src="/assets/Images/ik.gif" width="300" height="300" />
         </div>
       </section>
   </main>

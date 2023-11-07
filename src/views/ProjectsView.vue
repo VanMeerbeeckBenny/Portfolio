@@ -2,10 +2,10 @@
     <main >
         <div id="project-menu">
             <ul>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/c-logo.png"> - C#</router-link></li>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/js-logo.png"> - Javascript</router-link></li>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/python-logo.png"> - Python</router-link></li>
-                <li><router-link  :to="{name:'c-project-page'}"><img src="../assets/Images/vue-logo.png"> - Vue3</router-link></li>
+                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/c-logo.png"> - C#</router-link></li>
+                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/js-logo.png"> - Javascript</router-link></li>
+                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/python-logo.png"> - Python</router-link></li>
+                <li><router-link  :to="{name:'c-project-page'}"><img src="/assets/Images/vue-logo.png"> - Vue3</router-link></li>
             </ul>
         </div>
         <div class="d-flex flex-wrap justify-content-center" id="router-view">
