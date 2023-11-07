@@ -21,7 +21,8 @@ defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleCl
     margin: 10px 10px;
     padding: 0;
     overflow: hidden;
-    border-radius: 25px; 
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px; 
     position: relative;
     box-shadow: 10px 10px 15px black;    
 }
@@ -46,7 +47,8 @@ defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleCl
 }
 
 .javascript-overlay-color{
-    background-color: rgb(100, 65, 134);
+    background-color: #c2b664;
+    color:#323330;
 }
 
 .c-sharp-overlay-color{
@@ -62,7 +64,7 @@ defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleCl
 }
 
 .overlay p {    
-    opacity: 0.5;
+    opacity: 0.7;
     font-weight:bold;
     font-style:italic;
     font-size: 1rem;
