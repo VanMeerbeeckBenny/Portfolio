@@ -12,4 +12,9 @@ const colorClass = "vue-overlay-color"
                  title-and-alt="Cocktails"
                  :style-class= colorClass />
     
+    <ProjectCard project-name="Portfolio"
+                 :picture-path= convertingNumeral 
+                 title-and-alt="Portfolio"
+                 :style-class= colorClass />
+    
 </template>
