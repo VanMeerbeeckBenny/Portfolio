@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
-import CProject from '../views/CProjectView.vue'
+import CProjectView from '../views/CProjectView.vue'
+import javascriptView from '../views/JavaScriptView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,11 +22,16 @@ const router = createRouter({
     {
       path: '/project',
       name: 'project-page',
-      component: ProjectsView,
+      component: ProjectsView,      
       children:[{
         path:'c',
         name:'c-project-page',
-        component:CProject
+        component:CProjectView
+      },
+      {
+        path:'javascript',
+        name:'javascript-project-page',
+        component:javascriptView,        
       }]    
     },
     {
@@ -39,7 +46,8 @@ const router = createRouter({
     // which is lazy-loaded when the route is visited.
     //component: () => import('../views/AboutView.vue')
     //}
-  ]
+  ],
+
 })
 
 export default router
