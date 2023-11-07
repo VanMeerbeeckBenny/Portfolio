@@ -13,8 +13,7 @@ const colorClass = "javascript-overlay-color"
                  title-and-alt="Converting numeral systems"
                  :style-class= colorClass />
 
-    <ProjectCard project-type="Wiki game of thrones"
-                 project-name="Cocktail"
+    <ProjectCard project-name="Game of thrones"
                  :picture-path= GameOfThronePath 
                  title-and-alt="Wiki game of thrones"
                  :style-class= colorClass />
