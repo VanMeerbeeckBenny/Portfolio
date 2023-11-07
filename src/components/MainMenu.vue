@@ -11,7 +11,7 @@
               <router-link class="nav-link" :to="{ name: 'home-page' }">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'c-project-page' }">Projects</router-link>
+              <router-link class="nav-link" :to="{ name: 'c-project-page' }" :class="{ 'router-link-active': isProjectActive }">Projects</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'about-page' }">About Me</router-link>
@@ -25,6 +25,31 @@
     </nav>    
   </header>
 </template>
+
+<script>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+export default { 
+
+  setup() {
+    const route = useRoute();
+
+    const isProjectActive = computed(() => {
+      const currentRouteName = route.name;
+      if(typeof(currentRouteName) !== 'undefined')
+      {
+        return currentRouteName === 'project-page' || currentRouteName.includes('project-');
+      }else return null;
+    });
+
+    return {
+      isProjectActive,
+    };
+  },
+};
+</script>
+
 <style scoped>
 @import '../assets/base.css'; 
 
