@@ -47,16 +47,16 @@ defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleCl
 }
 
 .javascript-overlay-color{
-    background-color: #c2b664;
+    background-color: #aaa168;
     color:#323330;
 }
 
-.c-sharp-overlay-color{
-    background-color: rgb(100, 65, 134);
+.python-overlay-color{
+    background-color: rgb(65, 105, 134);
 }
 
-.c-sharp-overlay-color{
-    background-color: rgb(100, 65, 134);
+.vue-overlay-color{
+    background-color:  rgb(71, 137, 101);
 }
 
 .overlay:hover{
