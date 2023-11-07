@@ -7,9 +7,9 @@ const colorClass = "python-overlay-color"
 </script>
 
 <template>
-    <ProjectCard project-name="Converting numeral systems"
+    <ProjectCard project-name="Mario Clone"
                  :picture-path= convertingNumeral 
-                 title-and-alt="Converting numeral systems"
+                 title-and-alt="Mario Clone"
                  :style-class= colorClass />
     
 </template>
