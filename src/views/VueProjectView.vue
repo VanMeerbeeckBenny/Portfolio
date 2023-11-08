@@ -1,19 +1,20 @@
 <script setup>
 import ProjectCard from '../components/ProjectCard.vue'
 
-const convertingNumeral = '/assets/Images/talstelsels-converteren-screenshot.PNG';
+const Portfolio = '/assets/Images/portfolio-screenshot.PNG';
+const CocktalVue = '/assets/Images/cocktail-vue-screenshot.PNG';
 
 const colorClass = "vue-overlay-color"
 </script>
 
 <template>
     <ProjectCard project-name="Cocktails"
-                 :picture-path= convertingNumeral 
+                 :picture-path= CocktalVue 
                  title-and-alt="Cocktails"
                  :style-class= colorClass />
     
     <ProjectCard project-name="Portfolio"
-                 :picture-path= convertingNumeral 
+                 :picture-path= Portfolio 
                  title-and-alt="Portfolio"
                  :style-class= colorClass />
     
