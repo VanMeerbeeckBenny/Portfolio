@@ -11,34 +11,45 @@ const returnToProjects = () => {
         <article class="d-flex flex-column">
             <h1>Cocktail API</h1>
             <div id="project-detail">
-                <iframe width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/itQLBGQyTX8"                 
-                        allowfullscreen>
-                </iframe>
+                <div>
+                    <iframe width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/itQLBGQyTX8"                 
+                            allowfullscreen>
+                    </iframe>
+                    <p>Take a look at the source code <a href>here</a></p>
+                </div>
                 <section class="tech-stack">
                     <h4 class="">Tech-stack</h4>
-                    <p>Framework:</p><p class="details">Built on Microsoft's ASP.NET Core</p>
-                    <p>Database:</p><p class="details"> Microsoft SQL Server</p>                
-                    <p>API Documentation:</p><p class="details"> Swagger UI</p>
-                    <p>User Management:</p><p class="details"> ASP.NET Identity Framework</p>
-                    <p>Object-relational mapping (ORM) :</p><p class="details"> Entity Framework</p>
-                    <p>Authentication & Authorization:</p><p class="details"> Identity Framework with claims and principles. The project uses the Bearer Token Authentication approach for securing APIs, where users receive a token upon successful login.</p>
-                    <p>Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>
-                    <p>CORS:</p><p class="details"> Allows cross-origin requests</p>                  
+                    <p class="stack-item">Framework:</p><p class="details">Built on Microsoft's ASP.NET Core</p>
+                    <p class="stack-item">Database:</p><p class="details"> Microsoft SQL Server</p>                
+                    <p class="stack-item">API Documentation:</p><p class="details"> Swagger UI</p>
+                    <p class="stack-item">User Management:</p><p class="details"> ASP.NET Identity Framework</p>
+                    <p class="stack-item">Object-relational mapping (ORM) :</p><p class="details"> Entity Framework</p>
+                    <p class="stack-item">Authentication & Authorization:</p><p class="details"> Identity Framework with claims and principles. The project uses the Bearer Token Authentication approach for securing APIs, where users receive a token upon successful login.</p>
+                    <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>
+                    <p class="stack-item">CORS:</p><p class="details"> Allows cross-origin requests</p>                  
                 </section>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-primary mt-3 mb-3"
-                        @click="returnToProjects">back</button>
-            </div>
-            
+            </div>           
         </article>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary mt-3 mb-3"
+                    @click="returnToProjects">back</button>
+        </div>
        
     </main>
 </template>
 
 <style scoped>
+a:hover{
+    background-color: transparent;
+}
+
+a{
+    color:rgba(235, 64, 64, 0.651);    
+    text-decoration: underline;
+    
+}
 main{
     padding: 0 20px;
 }
@@ -61,15 +72,12 @@ h4{
     align-items: center;
 }
 
-p:not(.details) {
+.stack-item {
     line-height: 15px;
     color:rgb(11, 9, 9); 
     margin-bottom: 0.3rem;
     letter-spacing: 1px;
     font-weight: bold;    
-}
-p{
-    font-family:'Courier New', Courier, monospace;
 }
 .tech-stack{
     word-wrap: break-word;
@@ -77,7 +85,6 @@ p{
 .details{  
     line-height: 15px;  
     color:rgba(255, 255, 255, 0.677);
- 
     
 }
 button{
