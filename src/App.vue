@@ -4,10 +4,9 @@
 </script>
 
 <template>  
-  <MainMenu></MainMenu>
-  <div class="main-content">
-    <RouterView />
-  </div>
+  <MainMenu></MainMenu> 
+  <RouterView />
+
 </template>
 
 <style scoped>
