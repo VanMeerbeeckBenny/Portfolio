@@ -50,9 +50,9 @@ const router = createRouter({
     },
     {
       path:'/API',
-      name:'API',
+      name:'project-API',
       component: () => import('../views/APICocktailView.vue')
-    }
+    },
   ], 
 })
 
