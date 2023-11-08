@@ -1,11 +1,14 @@
 <script setup>
 import ProjectCard from '../components/ProjectCard.vue'
 
+
 const ApiPath = '/assets/Images/api-screenshot.PNG';
 const XamarinPath = '/assets/Images/xamarin-screenshot.PNG';
 const CricketPath = '/assets/Images/cricketdarts-screenshot.PNG';
 const SpoticlonePath = '/assets/Images/spoticlone-screenshot.PNG';
 const colorClass = "c-sharp-overlay-color"
+
+const APIRouteName = 'API';
 </script>
 
 <template>
@@ -13,7 +16,8 @@ const colorClass = "c-sharp-overlay-color"
                  project-name="Cocktail"
                  :picture-path= ApiPath 
                  title-and-alt="API"
-                 :style-class= colorClass />
+                 :style-class= colorClass
+                 :route-name=APIRouteName />
 
     <ProjectCard project-type="Xamarin"
                  project-name="MemmoryHelper"
