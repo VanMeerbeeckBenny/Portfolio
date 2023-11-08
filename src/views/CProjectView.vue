@@ -16,7 +16,7 @@ const colorClass = "c-sharp-overlay-color"
                  :style-class= colorClass />
 
     <ProjectCard project-type="Xamarin"
-                 project-name="Cocktail"
+                 project-name="MemmoryHelper"
                  :picture-path= XamarinPath 
                  title-and-alt="Xamarin MemmoryHelper"
                  :style-class= colorClass />
