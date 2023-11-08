@@ -70,8 +70,7 @@ a.nav-link:not(.router-link-active) {
   color: rgb(137, 85, 147);
 }
 
-a.nav-link{
-  font-family:'Times New Roman', Times, serif;
+a.nav-link{  
   letter-spacing: 2px; 
   font-size: 1.1rem;
   font-weight: bold;

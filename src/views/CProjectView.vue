@@ -8,7 +8,7 @@ const CricketPath = '/assets/Images/cricketdarts-screenshot.PNG';
 const SpoticlonePath = '/assets/Images/spoticlone-screenshot.PNG';
 const colorClass = "c-sharp-overlay-color"
 
-const APIRouteName = 'API';
+const APIRouteName = 'project-API';
 </script>
 
 <template>
