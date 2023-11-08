@@ -1,21 +1,37 @@
 <script setup>
-defineProps(['projectType', 'projectName', 'picturePath', 'titleAndAlt','styleClass']);
+import { useRouter } from 'vue-router';
+const router = useRouter()
+const props = defineProps([
+    'projectType', 
+    'projectName',
+    'picturePath',
+    'titleAndAlt',
+    'styleClass',
+    'routeName'
+  ]);
+
+  const navigateToLocation = () => {
+    router.push({name:props.routeName})        
+        }
 </script>
 
 <template>
-    <div class="container" >
-        <div class="overlay" :class="styleClass">
+    <div class="container" 
+        @click="navigateToLocation">
+        <div class="overlay" :class="props.styleClass">
             <div class="text-container">
-                <p>{{projectType}}</p>
-                <p>{{projectName}}</p>
+                <p>{{props.projectType}}</p>
+                <p>{{props.projectName}}</p>
             </div>
         </div>
         <div class="content">
-            <img :src='picturePath' :title='titleAndAlt' :alt="titleAndAlt" >
+            <img :src='props.picturePath' :title='props.titleAndAlt' :alt="props.titleAndAlt" >
         </div>
     </div>
 </template>
+<script>
 
+</script>
 <style scoped>
 .container{    
     margin: 10px 10px;
