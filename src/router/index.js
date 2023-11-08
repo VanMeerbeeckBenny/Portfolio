@@ -47,6 +47,11 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact-page'
+    },
+    {
+      path:'/API',
+      name:'API',
+      component: () => import('../views/APICocktailView.vue')
     }
   ], 
 })
