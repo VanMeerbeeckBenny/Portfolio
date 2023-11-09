@@ -1,8 +1,12 @@
-
+<script setup>
+const props = defineProps({
+    headerText:String
+})
+</script>
 <template>
     <main>    
         <article class="d-flex flex-column">
-            <h1>Cocktail API</h1>
+            <h1>{{ props.headerText }}</h1>
             <div id="project-detail">
                 <slot name="video-and-repo" v-if="$slots['video-and-repo']"></slot>
                 <slot name="project-main-info" v-if="$slots['project-main-info']"></slot>
