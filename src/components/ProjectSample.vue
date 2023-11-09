@@ -26,9 +26,6 @@ p{
     font-size: 0.8rem; 
 }
 
-a:hover{
-    background-color: transparent;
-}
 iframe{
     width:100%;
     height:200px;

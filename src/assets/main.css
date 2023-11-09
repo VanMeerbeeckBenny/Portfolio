@@ -14,11 +14,27 @@ a,
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.details{  
+  line-height: 15px;  
+  color:rgba(255, 255, 255, 0.677);
+  
+}
+
+.stack-item {
+  line-height: 15px;
+  color:rgb(11, 9, 9); 
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
+  font-weight: bold;    
+}
+.tech-stack{
+  word-wrap: break-word;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1024px) {
+  .tech-stack{
+    width: 50%;
+    font-size: 1rem;
+}   
 }

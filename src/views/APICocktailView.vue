@@ -33,33 +33,14 @@ const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 
 <style scoped>
 
-.stack-item {
-    line-height: 15px;
-    color:rgb(11, 9, 9); 
-    margin-bottom: 0.3rem;
-    letter-spacing: 1px;
-    font-weight: bold;    
-}
-.tech-stack{
-    word-wrap: break-word;
-    font-size: 0.8rem;
-}
-
 h4{    
     color: rgb(137, 85, 147); 
     width:fit-content;
     margin:10px auto;    
 }
-.details{  
-    line-height: 15px;  
-    color:rgba(255, 255, 255, 0.677);
-    
-}
+
 @media(min-width:1000px){
    
-    .tech-stack{
-        width: 50%;
-        font-size: 1rem;
-    }      
+     
 }
 </style>
