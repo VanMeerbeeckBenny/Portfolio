@@ -1,25 +1,19 @@
 <script setup>
-import {useRouter} from 'vue-router'
-const router = useRouter();
-const returnToProjects = () => {
-    router.push({name:'c-project-page'})
-}
+
+import ProjectPresentationTemplate from '../components/ProjectPresentationTemplate.vue';
+import ReturnButton from '../components/ReturnButton.vue';
+import VideoExample from '../components/VideoExample.vue';
+const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 </script>
 
 <template>
-    <main>    
-        <article class="d-flex flex-column">
-            <h1>Cocktail API</h1>
-            <div id="project-detail">
-                <div>
-                    <iframe width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/itQLBGQyTX8"                 
-                            allowfullscreen>
-                    </iframe>
-                    <p>Take a look at the source code <a href>here</a></p>
-                </div>
-                <section class="tech-stack">
+   <ProjectPresentationTemplate>
+    <template #video-and-repo>
+        <VideoExample :video-clip-link= videoLink
+                      repository-link="#" ></VideoExample>
+    </template>
+    <template #info-section>
+        <section class="tech-stack">
                     <h4 class="">Tech-stack</h4>
                     <p class="stack-item">Framework:</p><p class="details">Built on Microsoft's ASP.NET Core</p>
                     <p class="stack-item">Database:</p><p class="details"> Microsoft SQL Server</p>                
@@ -30,47 +24,14 @@ const returnToProjects = () => {
                     <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>
                     <p class="stack-item">CORS:</p><p class="details"> Allows cross-origin requests</p>                  
                 </section>
-            </div>           
-        </article>
-        <div class="d-flex justify-content-center">
-            <button class="btn btn-primary mt-3 mb-3"
-                    @click="returnToProjects">back</button>
-        </div>
-       
-    </main>
+    </template>
+    <template #return-button>
+        <ReturnButton pageName="c-project-page"></ReturnButton>
+    </template>
+   </ProjectPresentationTemplate>
 </template>
 
 <style scoped>
-a:hover{
-    background-color: transparent;
-}
-
-a{
-    color:rgba(235, 64, 64, 0.651);    
-    text-decoration: underline;
-    
-}
-main{
-    padding: 0 20px;
-}
-h1 {
-    letter-spacing: 2px;
-    width:fit-content;
-    margin:0 auto;
-    color: rgb(137, 85, 147);
-}
-h4{    
-    color: rgb(137, 85, 147); 
-    width:fit-content;
-    margin:10px auto;    
-}
-#project-detail{
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
 .stack-item {
     line-height: 15px;
@@ -81,27 +42,24 @@ h4{
 }
 .tech-stack{
     word-wrap: break-word;
+    font-size: 0.8rem;
+}
+
+h4{    
+    color: rgb(137, 85, 147); 
+    width:fit-content;
+    margin:10px auto;    
 }
 .details{  
     line-height: 15px;  
     color:rgba(255, 255, 255, 0.677);
     
 }
-button{
-    width:200px;
-}
 @media(min-width:1000px){
-    iframe{
-        margin-top:50px;
-        margin-right: 50px;
-    }
-    #project-detail{
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 0px;          
-    }
+   
     .tech-stack{
         width: 50%;
+        font-size: 1rem;
     }      
 }
 </style>
