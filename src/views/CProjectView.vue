@@ -9,6 +9,7 @@ const SpoticlonePath = '/assets/Images/spoticlone-screenshot.PNG';
 const colorClass = "c-sharp-overlay-color"
 
 const APIRouteName = 'project-API';
+const memmoryHelperRouteName = 'project-memmoryHelper';
 </script>
 
 <template>
@@ -23,7 +24,8 @@ const APIRouteName = 'project-API';
                  project-name="MemmoryHelper"
                  :picture-path= XamarinPath 
                  title-and-alt="Xamarin MemmoryHelper"
-                 :style-class= colorClass />
+                 :style-class= colorClass
+                 :route-name=memmoryHelperRouteName />
 
     <ProjectCard project-type="Blazor"
                  project-name="Cricketdarts"
