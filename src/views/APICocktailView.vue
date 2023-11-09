@@ -7,7 +7,7 @@ const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 </script>
 
 <template>
-   <ProjectPresentationTemplate>
+   <ProjectPresentationTemplate header-text="Cocktail API">
     <template #video-and-repo>
         <ProjectSample :video-clip-link= videoLink
                       repository-link="#" ></ProjectSample>
