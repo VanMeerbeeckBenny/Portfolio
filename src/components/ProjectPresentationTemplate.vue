@@ -37,16 +37,10 @@ h1 {
 }
 
 @media(min-width:1000px){
-    iframe{
-        margin-top:50px;
-        margin-right: 50px;
-    }
-
     #project-detail{
         flex-direction: row;
         justify-content: center;
         padding-top: 0px;          
-    }
-      
+    }     
 }
 </style>
