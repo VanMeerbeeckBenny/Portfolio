@@ -1,3 +1,9 @@
+<script setup>
+const closeMenu = () => {
+  let menu = document.getElementById("navbarSupportedContent");
+  menu.classList.toggle("show")
+}
+</script>
 <template>
   <header>
     <nav class="navbar navbar-expand-lg">
@@ -8,16 +14,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'home-page' }">Home</router-link>
+              <router-link class="nav-link" :to="{ name: 'home-page' }" @click="closeMenu">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'c-project-page' }" :class="{ 'router-link-active': isProjectActive }">Projects</router-link>
+              <router-link class="nav-link" :to="{ name: 'c-project-page' }" :class="{ 'router-link-active': isProjectActive }" @click="closeMenu">Projects</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'about-page' }">About Me</router-link>
+              <router-link class="nav-link" :to="{ name: 'about-page' }" @click="closeMenu">About Me</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'contact-page' }">Contact</router-link>
+              <router-link class="nav-link" :to="{ name: 'contact-page' }" @click="closeMenu">Contact</router-link>
             </li>            
           </ul>          
         </div>
@@ -72,18 +78,25 @@ a.nav-link:not(.router-link-active) {
 
 a.nav-link{  
   letter-spacing: 2px; 
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
 }
-header {
-  line-height: 60px;
-}
+
 .custom-toggler {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(137, 85, 147)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 button.navbar-toggler{
   border:1px solid rgb(137, 85, 147);
   outline: none;
+}
+
+@media (min-width:1000px){
+  a.nav-link{  
+  font-size: 1.1rem;
+  font-weight: bold;
+  }
+header {
+  line-height: 60px;
+  }
 }
 
 </style>
