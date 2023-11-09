@@ -19,7 +19,7 @@ const closeMenu = () => {
 </script>
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon custom-toggler"></span>
@@ -39,25 +39,17 @@ const closeMenu = () => {
               <router-link class="nav-link" :to="{ name: 'contact-page' }" @click="closeMenu">Contact</router-link>
             </li>            
           </ul>          
-        </div>
+        </div>   
       </div>
     </nav>    
   </header>
 </template>
 
 <style scoped>
-@import '../assets/base.css'; 
-
-a:hover:not(.router-link-active) {
-  background-color: transparent !important;
-  color: var(--vt-c-text-light-2)
-}
 
 a.nav-link:not(.router-link-active) {
   color: var(--vt-c-text-light-2)
 }
-
-
 
 .router-link-active {
   border-bottom: 2px solid rgba(144, 41, 165, 0.995);
@@ -68,6 +60,11 @@ a.nav-link:not(.router-link-active) {
 a.nav-link{  
   letter-spacing: 2px; 
   font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.502);
 }
 
 .custom-toggler {
@@ -78,14 +75,18 @@ button.navbar-toggler{
   outline: none;
 }
 
-@media (min-width:1000px){
+@media (min-width:575px){
+  
   a.nav-link{  
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.1rem;  
   }
 header {
   line-height: 60px;
   }
+
+  .navbar{
+  background-color: transparent;
+}
 }
 
 </style>
