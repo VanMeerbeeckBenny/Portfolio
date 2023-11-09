@@ -34,13 +34,11 @@ const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 <style scoped>
 
 h4{    
-    color: rgb(137, 85, 147); 
+ 
     width:fit-content;
-    margin:10px auto;    
+    margin:0 0 20px 0;  
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.81);
 }
 
-@media(min-width:1000px){
-   
-     
-}
 </style>
