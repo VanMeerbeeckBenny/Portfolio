@@ -1,14 +1,14 @@
 <script setup>
 import { useRouter } from 'vue-router';
 const router = useRouter()
-const props = defineProps([
-    'projectType', 
-    'projectName',
-    'picturePath',
-    'titleAndAlt',
-    'styleClass',
-    'routeName'
-  ]);
+const props = defineProps({
+    projectType:String, 
+    projectName:String,
+    picturePath:String,
+    titleAndAlt:String,
+    styleClass:String,
+    routeName:String
+});
 
   const navigateToLocation = () => {
     router.push({name:props.routeName})        
