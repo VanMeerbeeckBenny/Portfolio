@@ -71,7 +71,7 @@
     margin-bottom: 50px;
 }
 main{
-    padding-top: 50px;
+    
     display: flex;  
     flex-direction: column;  
 }
@@ -90,6 +90,7 @@ main{
 
     main{
         flex-direction: row;
+        padding-top: 50px;
     }
 
     #project-menu ul {
