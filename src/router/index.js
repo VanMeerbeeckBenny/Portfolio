@@ -53,6 +53,11 @@ const router = createRouter({
       name:'project-API',
       component: () => import('../views/APICocktailView.vue')
     },
+    {
+      path:'/memmoryHelper',
+      name:'project-memmoryHelper',
+      component: () => import('../views/MemmoryHelperView.vue')
+    },
   ], 
 })
 
