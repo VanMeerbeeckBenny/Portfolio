@@ -2,15 +2,15 @@
 
 import ProjectPresentationTemplate from '../components/ProjectPresentationTemplate.vue';
 import ReturnButton from '../components/ReturnButton.vue';
-import VideoExample from '../components/VideoExample.vue';
+import ProjectSample from '../components/ProjectSample.vue';
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 </script>
 
 <template>
    <ProjectPresentationTemplate>
     <template #video-and-repo>
-        <VideoExample :video-clip-link= videoLink
-                      repository-link="#" ></VideoExample>
+        <ProjectSample :video-clip-link= videoLink
+                      repository-link="#" ></ProjectSample>
     </template>
     <template #info-section>
         <section class="tech-stack">
