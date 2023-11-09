@@ -1,4 +1,17 @@
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isProjectActive = computed(() => {
+  const currentRouteName = route.name;
+  if(typeof(currentRouteName) !== 'undefined')
+  {
+    return currentRouteName === 'project-page' || currentRouteName.includes('project-');
+  }else return null;
+});
+
 const closeMenu = () => {
   let menu = document.getElementById("navbarSupportedContent");
   menu.classList.toggle("show")
@@ -31,30 +44,6 @@ const closeMenu = () => {
     </nav>    
   </header>
 </template>
-
-<script>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-
-export default { 
-
-  setup() {
-    const route = useRoute();
-
-    const isProjectActive = computed(() => {
-      const currentRouteName = route.name;
-      if(typeof(currentRouteName) !== 'undefined')
-      {
-        return currentRouteName === 'project-page' || currentRouteName.includes('project-');
-      }else return null;
-    });
-
-    return {
-      isProjectActive,
-    };
-  },
-};
-</script>
 
 <style scoped>
 @import '../assets/base.css'; 
