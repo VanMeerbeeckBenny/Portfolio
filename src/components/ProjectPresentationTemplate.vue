@@ -4,8 +4,9 @@
         <article class="d-flex flex-column">
             <h1>Cocktail API</h1>
             <div id="project-detail">
-                <slot name="video-and-repo"></slot>
-                <slot name="info-section"></slot>
+                <slot name="video-and-repo" v-if="$slots['video-and-repo']"></slot>
+                <slot name="project-main-info" v-if="$slots['project-main-info']"></slot>
+                <slot name="info-section" ></slot>
             </div>           
         </article>
         <div class="d-flex justify-content-center">
