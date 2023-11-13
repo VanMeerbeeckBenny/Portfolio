@@ -5,16 +5,11 @@
 
 <template>  
   <MainMenu></MainMenu> 
-  <RouterView />
-
+       <RouterView />
+  
 </template>
 
 <style scoped>
-nav a:first-of-type {
-  border: 0;
-}
-
-
 
 @media (min-width: 1024px) {
   /* header { 
