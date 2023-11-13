@@ -6,23 +6,43 @@ const props = defineProps({
 <template>
     <main>    
         <article class="d-flex flex-column">
-            <h1>{{ props.headerText }}</h1>
+            
             <div id="project-detail">
-                <slot name="video-and-repo" v-if="$slots['video-and-repo']"></slot>
-                <slot name="project-main-info" v-if="$slots['project-main-info']"></slot>
-                <slot name="info-section" ></slot>
+                <div class="custom-container" v-if="$slots['video-and-repo']">
+                <h1>{{ props.headerText }}</h1>
+                 <slot name="video-and-repo"></slot>
+                </div>
+                <div class="custom-container" v-if="$slots['project-main-info']">
+                    <slot name="project-main-info" ></slot>
+                </div>
+
+                <div class="custom-container color p-3">
+                    <slot name="info-section"></slot>
+                    <div class="d-flex justify-content-center mt-5">
+                        <slot name="return-button"></slot>
+                    </div>
+                </div>
             </div>           
         </article>
-        <div class="d-flex justify-content-center">
-            <slot name="return-button"></slot>
-        </div>
+      
        
     </main>
 </template>
 
 <style scoped>
-main{
-    padding: 0 20px;
+
+
+.custom-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    align-items: center; 
+   
+}
+
+.color{
+    background-color: rgba(200, 199, 199, 0.261);
 }
 
 h1 {
@@ -32,19 +52,12 @@ h1 {
     color: rgb(137, 85, 147);
 }
 
-#project-detail{
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
 @media(min-width:1000px){
     #project-detail{
         flex-direction: row;
         justify-content: center;
-        padding-top: 0px;          
+                 
     }     
 }
 </style>

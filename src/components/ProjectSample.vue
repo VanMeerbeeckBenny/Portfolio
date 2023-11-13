@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div>
+    <div class="custom-container">
         <iframe 
                 :src= props.videoClipLink               
                 allowfullscreen>
@@ -18,8 +18,9 @@ const props = defineProps({
 <style scoped>
 
 a{    
-    color:rgba(235, 64, 64, 0.651);    
-    text-decoration: underline;      
+    color:rgba(240, 75, 75, 0.651);    
+    text-decoration: underline;  
+    font-size: 1.1rem;    
 }
 
 p{
@@ -27,19 +28,29 @@ p{
 }
 
 iframe{
-    width:100%;
+    margin-top:30px;
+    border-radius: 15px;
+    width:356px;
     height:200px;
+    transition: 0.5s ease-in-out;
 }
-@media(min-width:1000px){
-    iframe{
-        margin-top:50px;
-        margin-right: 50px;
+
+.custom-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;        
+}
+@media(min-width:700px){
+    iframe{       
+       
         width:560px;
-        height:315px;
+        height:315px;        
     }  
     
     p{
     font-size: 1rem; 
     }
+
+   
 }
 </style>

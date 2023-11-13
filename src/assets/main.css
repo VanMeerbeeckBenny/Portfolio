@@ -1,5 +1,27 @@
 @import './base.css';
+body, html {
+  overflow: auto; /* or 'visible' */
+}
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(91, 91, 91, 0.242);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(101, 60, 110);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(137, 85, 147);
+}
 #app {
   height: 100vh;
   margin: 0 auto;
@@ -32,9 +54,13 @@ a,
   font-size: 0.8rem;
 }
 
+
 @media (min-width: 1024px) {
   .tech-stack{
     width: 50%;
     font-size: 1rem;
 }   
+::-webkit-scrollbar {
+  width: 10px;
+}
 }

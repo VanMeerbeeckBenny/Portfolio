@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <main>
-    <section class="intro mb-5">        
+  <main >
+    <section class="intro">        
         <div class="d-flex align-items-center justify-content-center">
           <div class="into-text">
             <h1 class="about-header">Hi, my name is</h1>
@@ -19,7 +19,8 @@
 
 <style scoped>
 .intro{
-    display: flex;    
+    display: flex;  
+    justify-content: center;  
   }
 
 @media (max-width: 1024px) {
@@ -36,7 +37,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height:calc(100vh - 200px);
+  height:calc(100vh - 80px);
 }
 
 .about-header {

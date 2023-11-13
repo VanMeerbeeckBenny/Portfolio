@@ -4,7 +4,7 @@
       
     
 
-      <section>
+      <section class=" m-auto">
         <h1>Education</h1>
         <p>
           As i recently graduated as a graduate developer, i'll be mostly showing my work from
@@ -22,11 +22,16 @@
 
 <style scoped>
 
-main{
+section{
+  max-width: 700px; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
   height:calc(100vh - 115px);
+}
+
+article{
+  padding: 0 20px;
 }
 
 </style>
