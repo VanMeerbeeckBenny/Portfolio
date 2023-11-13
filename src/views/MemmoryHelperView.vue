@@ -17,7 +17,7 @@ const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
                     <h4 class="">Tech-stack</h4>
                     <p class="stack-item">Framework:</p><p class="details">Xamarin (.net Core) with FreshMvvm</p>                    
                     <p class="stack-item">Database:</p><p class="details"> Firebase Realtime Database</p>                     
-                    <p class="stack-item">User Management:</p><p class="details">A custom table within the Realtime Database features a userId column, aligning with the User ID (UID) found in the corresponding row from Firebase Authentication. This table contains additional custom data linked to individual users.</p>
+                    <p class="stack-item">User Management:</p><p class="details">A custom table within the Realtime Database features a userId column, aligning with the User ID (UID) found in the corresponding row from Firebase Authentication.</p>
                     <p class="stack-item">Authentication & Authorization:</p><p class="details"> Firebase Authentication</p>
                     <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>                                    
                 </section>
