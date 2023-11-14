@@ -29,9 +29,6 @@ const props = defineProps({
         </div>
     </div>
 </template>
-<script>
-
-</script>
 <style scoped>
 .container{    
     cursor: pointer;

@@ -5,6 +5,7 @@ import ReturnButton from '../components/ReturnButton.vue';
 import ProjectSample from '../components/ProjectSample.vue';
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 const githubLink = "https://github.com/VanMeerbeeckBenny/Cocktail-API-public";
+
 </script>
 
 <template>
@@ -13,6 +14,7 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Cocktail-API-public";
         <ProjectSample :video-clip-link= videoLink
                        :repository-link=githubLink ></ProjectSample>
     </template>
+ 
     <template #info-section>
         <section class="tech-stack">
                     <h4 class="">Tech-stack</h4>

@@ -23,9 +23,6 @@ a{
     font-size: 1.1rem;    
 }
 
-p{
-    font-size: 0.8rem; 
-}
 
 iframe{
     margin-top:30px;
@@ -47,9 +44,7 @@ iframe{
         height:315px;        
     }  
     
-    p{
-    font-size: 1rem; 
-    }
+
 
    
 }
