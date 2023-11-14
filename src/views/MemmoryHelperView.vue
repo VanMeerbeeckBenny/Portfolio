@@ -3,7 +3,9 @@
 import ProjectPresentationTemplate from '../components/ProjectPresentationTemplate.vue';
 import ReturnButton from '../components/ReturnButton.vue';
 import ProjectSample from '../components/ProjectSample.vue';
+import ToolsUsed from '../components/ToolsUsed.vue';
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
+const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
 </script>
 
 <template>
@@ -11,6 +13,9 @@ const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
     <template #video-and-repo>
         <ProjectSample :video-clip-link= videoLink
                       repository-link="#" ></ProjectSample>
+    </template>
+    <template #used-tools>
+        <ToolsUsed :tools= toolsUsed></ToolsUsed>
     </template>
     <template #info-section>
         <section class="tech-stack">

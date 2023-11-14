@@ -5,12 +5,12 @@ const props = defineProps({
 </script>
 <template>
     <main>    
-        <article class="d-flex flex-column">
-            
+        <article class="d-flex flex-column">            
             <div id="project-detail">
                 <div class="custom-container" v-if="$slots['video-and-repo']">
-                <h1>{{ props.headerText }}</h1>
-                 <slot name="video-and-repo"></slot>
+                    <h1>{{ props.headerText }}</h1>
+                    <slot name="video-and-repo"></slot>
+                    <slot name="used-tools"></slot>
                 </div>
                 <div class="custom-container" v-if="$slots['project-main-info']">
                     <slot name="project-main-info" ></slot>
@@ -23,9 +23,7 @@ const props = defineProps({
                     </div>
                 </div>
             </div>           
-        </article>
-      
-       
+        </article>    
     </main>
 </template>
 
