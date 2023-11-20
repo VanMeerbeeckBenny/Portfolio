@@ -61,17 +61,19 @@ a.nav-link:not(.router-link-active) {
 .router-link-active {
   border-bottom: 2px solid rgba(144, 41, 165, 0.995);
   background-color: transparent;
-  color: rgb(137, 85, 147);
+  color: rgba(144, 41, 165, 0.995);
 }
 
 a.nav-link{  
   letter-spacing: 2px; 
   font-size: 0.8rem;
   font-weight: bold;
+
 }
 
 .navbar{
   background-color: rgba(0, 0, 0, 0.18);
+  
 }
 
 .custom-toggler {
@@ -87,13 +89,11 @@ header{
 }
 
 @media (min-width:575px){
-  
+ 
   a.nav-link{  
   font-size: 1.1rem;  
   }
-header {
-  line-height: 60px;
-  }
+
 
   .navbar{
   background-color: transparent;
