@@ -52,11 +52,9 @@ const closeMenu = () => {
   </header>
 </template>
 <style scoped>
-
 a.nav-link:not(.router-link-active) {
   color: var(--vt-c-text-light-2)
 }
-
 .router-link-active {
   border-bottom: 2px solid rgba(144, 41, 165, 0.995);
   background-color: transparent;
@@ -67,12 +65,6 @@ a.nav-link{
   letter-spacing: 2px; 
   font-size: 0.8rem;
   font-weight: bold;
-
-}
-
-.navbar{
-  background-color: rgba(0, 0, 0, 0.18);
-  
 }
 
 .custom-toggler {
@@ -83,20 +75,18 @@ button.navbar-toggler{
   outline: none;
 }
 
-header{
-  z-index: 10;
-}
 
 @media (min-width:575px){
  
   a.nav-link{  
   font-size: 1.1rem;  
   }
-
-
-  .navbar{
-  background-color: transparent;
+  /*this fixes an issue with height changing unwanted.
+  This makes it easyer to have the submenu of project perfectly under it */
+  header{
+  height:70px;
 }
+
 }
 
 </style>
