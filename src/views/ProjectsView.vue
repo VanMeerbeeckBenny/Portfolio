@@ -16,6 +16,7 @@
 </template>
 
 <style scoped>
+@import '../assets/base.css';
 .csharp.router-link-active{
     background-color: rgba(99, 65, 134, 0.463);
 }
@@ -63,26 +64,46 @@
     justify-content: center;
     width: 100%;   
 }
-#project-menu{  
+#project-menu{ 
+    position:fixed;
+    top: 45px; 
+    z-index: 10;
     overflow: hidden;  
     min-width: 100%;
     height: fit-content;
-    background-color: rgba(0, 0, 0, 0.3);    
-    margin-bottom: 50px;
+    background-color:var(--sub-menu);    
 }
-main{
-    
+#router-view{
+    padding-top: 80px;
+}
+main{  
     display: flex;  
     flex-direction: column;  
+}
+@media (min-width:575px) {
+    #project-menu{
+    top: 70px; 
+    }
+    #router-view{
+        padding-top: 150px;
+    }
 }
 @media (min-width:700px) {
     #project-menu li a{
     font-size: 1rem;  
-}
+    }
+    #project-menu{
+        margin-top: 0px; 
+    }    
 }
 
 @media (min-width:1024px) {
-    #project-menu{
+    #router-view{
+        padding-left: 150px;
+        padding-top: 0px;
+    }
+    #project-menu{      
+        top: 120px;
         min-width: 150px;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
@@ -90,7 +111,7 @@ main{
 
     main{
         flex-direction: row;
-        padding-top: 50px;
+        padding-top: 100px;        
     }
 
     #project-menu ul {
