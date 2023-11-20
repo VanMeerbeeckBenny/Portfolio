@@ -9,6 +9,7 @@
   --vt-c-black-mute: #282828;
 
   --vt-c-indigo: #2c3e50;
+  --sub-menu:#212e3c;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -46,7 +47,7 @@
     --color-border-hover: var(--vt-c-divider-dark-1);
 
     --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-text: var(--vt-c-text-dark-2);    
   }
 }
 
@@ -59,7 +60,7 @@
 }
 
 body {
- background-color: #2c3e50;
+ background-color: var(--vt-c-indigo);
   min-height: 100vh;
   color: var(--vt-c-text-light-2);
   transition:
