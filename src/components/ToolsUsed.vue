@@ -5,9 +5,9 @@ const props =defineProps({
 </script>
 
 <template>
-    <section class="custom-container">
+    <section class="tools-container">
         <h4>Tools used :</h4>
-        <div class="d-flex flex-row">      
+        <div class="d-flex flex-row flex-wrap">      
             <span v-for="tool in props.tools" :key="tool" class="tool d-flex align-content-center justify-content-center"> {{ tool }} </span>
         </div>
     </section>
@@ -23,7 +23,7 @@ h4{
     border-radius: 10px;
 }
 
-.custom-container{
+.tools-container{
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ h4{
 }
 
 @media (min-width: 700px) {
-    .custom-container{
+    .tools-container{
     flex-direction: row;
 }
 }   

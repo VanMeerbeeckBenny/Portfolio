@@ -1,23 +1,36 @@
 <script setup>
+import ToolsUsed from './ToolsUsed.vue';
+import ProjectSample from './ProjectSample.vue';
 const props = defineProps({
-    headerText:String
+    headerText:String,
+    toolsUsed:Array,
+    videoClipLink:String,
+    repositoryLink:String
 })
 </script>
 <template>
     <main>    
         <article class="d-flex flex-column">            
             <div id="project-detail">
-                <div class="custom-container" v-if="$slots['video-and-repo']">
+                <div class="custom-container">
                     <h1>{{ props.headerText }}</h1>
-                    <slot name="video-and-repo"></slot>
-                    <slot name="used-tools"></slot>
+                    <slot name="video-and-repo" v-if="props.videoClipLink">
+                        <ProjectSample :video-clip-link= props.videoClipLink
+                                       :repository-link= props.repositoryLink />
+                    </slot>
+                    <slot name="used-tools">
+                        <ToolsUsed :tools= props.toolsUsed />
+                    </slot>
                 </div>
-                <div class="custom-container" v-if="$slots['project-main-info']">
-                    <slot name="project-main-info" ></slot>
+                <div class="custom-container" v-if="$slots['project-main-info']">                   
+                    <slot name="project-main-info" ></slot>                
                 </div>
 
-                <div class="custom-container color p-3">
-                    <slot name="info-section"></slot>
+                <div class="custom-container color p-3" v-if="$slots['info-section']">
+                    <section class="tech-stack">
+                        <h4 class="">Project info</h4>
+                        <slot name="info-section"></slot>
+                    </section>
                     <div class="d-flex justify-content-center mt-5">
                         <slot name="return-button"></slot>
                     </div>

@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="custom-container">
+    <div class="video-container">
         <iframe 
                 :src= props.videoClipLink               
                 allowfullscreen>
@@ -32,7 +32,7 @@ iframe{
     transition: 0.5s ease-in-out;
 }
 
-.custom-container{
+.video-container{
     flex-direction: column;
     display: flex;
     align-items: center;        
