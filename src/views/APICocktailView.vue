@@ -15,8 +15,7 @@ const toolsUsed = ["C#","VS","CSS","MS-SQL","Swagger","Github"]
                                 :repository-link=githubLink
                                 :tools-used=toolsUsed> 
  
-    <template #info-section>      
-                    
+    <template #info-section>                 
         <p class="stack-item">Framework:</p><p class="details">Built on Microsoft's ASP.NET Core</p>
         <p class="stack-item">Database:</p><p class="details"> Microsoft SQL Server</p>                
         <p class="stack-item">API Documentation:</p><p class="details"> Swagger UI</p>
@@ -24,23 +23,10 @@ const toolsUsed = ["C#","VS","CSS","MS-SQL","Swagger","Github"]
         <p class="stack-item">Object-relational mapping (ORM) :</p><p class="details"> Entity Framework</p>
         <p class="stack-item">Authentication & Authorization:</p><p class="details"> Identity Framework with claims and principles. The project uses the Bearer Token Authentication approach for securing APIs, where users receive a token upon successful login.</p>
         <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>
-        <p class="stack-item">CORS:</p><p class="details"> Allows cross-origin requests</p>                 
-               
+        <p class="stack-item">CORS:</p><p class="details"> Allows cross-origin requests</p>                
     </template>
     <template #return-button>
         <ReturnButton pageName="c-project-page"></ReturnButton>
     </template>
    </ProjectPresentationTemplate>
 </template>
-
-<style scoped>
-
-h4{    
- 
-    width:fit-content;
-    margin:0 0 20px 0;  
-    text-decoration: underline;
-    color: rgba(255, 255, 255, 0.81);
-}
-
-</style>

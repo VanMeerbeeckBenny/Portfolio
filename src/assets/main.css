@@ -49,10 +49,6 @@ a,
   letter-spacing: 1px;
   font-weight: bold;    
 }
-.tech-stack{
-  word-wrap: break-word;
-  font-size: 0.8rem;
-}
 p,span{
   font-size: 0.8rem;
 }

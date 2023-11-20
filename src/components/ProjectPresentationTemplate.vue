@@ -51,7 +51,11 @@ const props = defineProps({
     align-items: center; 
    
 }
-
+.tech-stack{
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  max-width: 80%;
+}
 .color{
     background-color: rgba(200, 199, 199, 0.261);
 }
@@ -63,6 +67,11 @@ h1 {
     color: rgb(137, 85, 147);
 }
 
+h4{ 
+ margin:0 0 20px 0;  
+ text-decoration: underline;
+ color: rgba(255, 255, 255, 0.81);
+}
 
 @media(min-width:1000px){
     #project-detail{
