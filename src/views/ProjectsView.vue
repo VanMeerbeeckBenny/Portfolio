@@ -14,7 +14,15 @@
        
     </main>
 </template>
-
+<script>
+export default {
+  mounted(){
+    // Scroll to the top when entering the route
+    window.scrollTo(0, 0);
+   
+  },
+};
+</script>
 <style scoped>
 @import '../assets/base.css';
 .csharp.router-link-active{

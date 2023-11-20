@@ -7,6 +7,7 @@ const props = defineProps({
     videoClipLink:String,
     repositoryLink:String
 })
+
 </script>
 <template>
     <main>    
@@ -39,7 +40,15 @@ const props = defineProps({
         </article>    
     </main>
 </template>
-
+<script>
+export default {
+  mounted(){
+    // Scroll to the top when entering the route
+    window.scrollTo(0, 0);
+   
+  },
+};
+</script>
 <style scoped>
 
 
