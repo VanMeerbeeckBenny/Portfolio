@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <main >
+  <main>
     <section class="intro">        
         <div class="d-flex align-items-center justify-content-center">
           <div class="into-text">
@@ -37,7 +37,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height:calc(100vh - 80px);
+  height:100vh;
 }
 
 .about-header {

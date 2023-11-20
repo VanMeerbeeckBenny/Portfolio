@@ -27,7 +27,7 @@ section{
   display: flex;
   justify-content: center; 
   flex-direction: column;
-  height:calc(100vh - 115px);
+  height:100vh;
 }
 
 article{
