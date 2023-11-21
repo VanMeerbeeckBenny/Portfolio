@@ -20,8 +20,8 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/project',
-      name: 'project-page',
+      path: '/projects',
+      name: 'projects-page',
       component: () => import('../views/ProjectsView.vue'),    
       children:[{
         path:'c',
@@ -46,17 +46,18 @@ const router = createRouter({
     },
     {
       path: '/contact',
-      name: 'contact-page'
+      name: 'contact-page',
+      component:() => import('../views/ContactView.vue')
     },
     {
       path:'/API',
       name:'project-API',
-      component: () => import('../views/APICocktailView.vue')
+      component: () => import('../views/projects/APICocktailView.vue')
     },
     {
       path:'/memmoryHelper',
       name:'project-memmoryHelper',
-      component: () => import('../views/MemmoryHelperView.vue')
+      component: () => import('../views/projects/MemmoryHelperView.vue')
     },
   ], 
 })
