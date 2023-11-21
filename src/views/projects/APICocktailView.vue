@@ -1,7 +1,7 @@
 <script setup>
 
-import ProjectPresentationTemplate from '../components/ProjectPresentationTemplate.vue';
-import ReturnButton from '../components/ReturnButton.vue';
+import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue';
+import ReturnButton from '../../components/ReturnButton.vue';
 
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 const githubLink = "https://github.com/VanMeerbeeckBenny/Cocktail-API-public";
