@@ -11,21 +11,20 @@ const props = defineProps({
 </script>
 <template>
     <main>    
-        <article class="d-flex flex-column">            
-            <div id="project-detail">
+        <article class="d-flex flex-column" id="project-detail">            
+       
                 <div class="custom-container">
                     <h1>{{ props.headerText }}</h1>
-                    <slot name="video-and-repo" v-if="props.videoClipLink">
+                    <div v-if="props.videoClipLink">
                         <ProjectSample :video-clip-link= props.videoClipLink
                                        :repository-link= props.repositoryLink />
-                    </slot>
-                    <slot name="used-tools">
-                        <ToolsUsed :tools= props.toolsUsed />
-                    </slot>
+                    </div>  
+                    <div v-else>                   
+                        <slot name="project-main-info"></slot>                
+                    </div>                  
+                    <ToolsUsed :tools= props.toolsUsed />                    
                 </div>
-                <div class="custom-container" v-if="$slots['project-main-info']">                   
-                    <slot name="project-main-info" ></slot>                
-                </div>
+                
 
                 <div class="custom-container color p-3" v-if="$slots['info-section']">
                     <section class="tech-stack">
@@ -36,7 +35,7 @@ const props = defineProps({
                         <slot name="return-button"></slot>
                     </div>
                 </div>
-            </div>           
+                
         </article>    
     </main>
 </template>
@@ -82,11 +81,4 @@ h4{
  color: rgba(255, 255, 255, 0.81);
 }
 
-@media(min-width:1000px){
-    #project-detail{
-        flex-direction: row;
-        justify-content: center;
-                 
-    }     
-}
 </style>
