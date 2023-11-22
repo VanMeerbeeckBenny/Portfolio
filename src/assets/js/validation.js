@@ -44,8 +44,9 @@ export function realTimeValidation(e){
  *  email: { value:"",id:"email"},
  *  message: { value:"",id:"message"},
  *})
- <input type="text" name="name"  class="form-control" id="formData.name.id"/>
- * ```
+ <input type="text" name="name"  class="form-control" id="name"/> 
+  ```
+  *For email use email as id as it wil be checked on that id for valid email
 */
 export function validateOnSubmit(formData){
     let isValid = true
