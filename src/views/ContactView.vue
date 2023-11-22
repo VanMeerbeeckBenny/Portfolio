@@ -1,5 +1,6 @@
 <script setup>
-import { reactive} from 'vue';
+import { reactive} from 'vue'
+import {validateOnSubmit,realTimeValidation} from '../assets/js/validation'
 
 const formData = reactive({
   name: { value:"",id:"name"},
@@ -7,35 +8,19 @@ const formData = reactive({
   message: { value:"",id:"message"},
 });
 
-const submitForm = () => {
-  // Handle form submission logic here
-  console.log('Form submitted:', formData);
- 
+
+const submitForm = () => {      
+    let isValid = validateOnSubmit(formData) 
+    if(isValid) submitToFormspree() 
 };
 
-const validate = (e) => {      
-    checkIfEmpty(e) 
-    if(e.target.id === formData.email.id){
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(!emailPattern.test(formData.email.value))setInvalidClass(e)
-            else setValidClass(e)
-    }     
-}
-
-const checkIfEmpty = (e) => {    
-    if(e.target.value === '')setInvalidClass(e)
-    else setValidClass(e)
-}
-
-const setValidClass = (e) => {
-    e.target.classList.remove('is-invalid')
-    e.target.classList.add('is-valid')
-}
-
-const setInvalidClass = (e) => {
-    e.target.classList.remove('is-valid')
-    e.target.classList.add('is-invalid')
-}
+const submitToFormspree = () => {
+  // Manually submit the form to Formspree
+  const form = document.querySelector('form');
+  form.action = import.meta.env.VITE_APP_FORMSPREE;
+  form.method = 'POST';
+  form.submit();
+};
 </script>
 
 <template>
@@ -45,15 +30,15 @@ const setInvalidClass = (e) => {
             <form @submit.prevent="submitForm">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
-                    <input type="text"  class="form-control" @input="validate" @focusout="validate" :id="formData.name.id" v-model="formData.name.value" required />
+                    <input type="text" name="name"  class="form-control" autocomplete="off" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.name.id" v-model="formData.name.value"/>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" @input="validate" @focusout="validate" :id="formData.email.id" placeholder="jhon@outlook.com" v-model="formData.email.value" required />
+                    <input type="email" name="email" class="form-control" autocomplete="off" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.email.id" placeholder="jhon@outlook.com" v-model="formData.email.value"/>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message:</label>
-                    <textarea class="form-control" @input="validate" @focusout="validate" :id="formData.message.id" v-model="formData.message.value" required rows="5"></textarea>
+                    <textarea class="form-control" name="message" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.message.id" v-model="formData.message.value" rows="5"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100" >Submit</button>
             </form>
@@ -64,6 +49,11 @@ const setInvalidClass = (e) => {
 <style scoped>
 label{
     font-size: 1rem;
+}
+
+
+input.placeholder-error::placeholder,textarea.placeholder-error::placeholder{
+    color:red;
 }
 .contact-container,input{
     font-size: 0.8rem;
