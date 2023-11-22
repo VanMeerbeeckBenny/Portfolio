@@ -34,7 +34,19 @@ export function realTimeValidation(e){
         else setValidClass(e.target.id)        
     }    
 }
-
+/**
+ * make sure the object formdata has objects inside with an id equel to your input element id
+ * like this:
+ * 
+ * ```javascript
+ * const formData = reactive({
+ *  name: { value:"",id:"name"},
+ *  email: { value:"",id:"email"},
+ *  message: { value:"",id:"message"},
+ *})
+ <input type="text" name="name"  class="form-control" id="formData.name.id"/>
+ * ```
+*/
 export function validateOnSubmit(formData){
     let isValid = true
     isSubmit = true;
