@@ -1,6 +1,6 @@
 <script setup>
 import { reactive} from 'vue'
-import {validateOnSubmit,realTimeValidation} from '../assets/js/validation'
+import {validateOnSubmit,realTimeValidation} from '../assets/js/validation.js'
 
 const formData = reactive({
   name: { value:"",id:"name"},
