@@ -26,12 +26,12 @@ const props = defineProps({
                 </div>
                 
 
-                <div class="custom-container color p-3" v-if="$slots['info-section']">
+                <div class="custom-container color" v-if="$slots['info-section']">
                     <section class="tech-stack">
                         <h4 class="">Project info</h4>
                         <slot name="info-section"></slot>
                     </section>
-                    <div class="d-flex justify-content-center mt-5">
+                    <div class="d-flex justify-content-center mt-2">
                         <slot name="return-button"></slot>
                     </div>
                 </div>
