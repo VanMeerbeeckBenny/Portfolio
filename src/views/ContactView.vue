@@ -31,14 +31,17 @@ const submitToFormspree = () => {
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
                     <input type="text" name="name"  class="form-control" autocomplete="off" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.name.id" v-model="formData.name.value"/>
-                </div>
+                    <div class="invalid-feedback" :id="`${formData.name.id}-feedback`"></div>
+                </div>                
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" class="form-control" autocomplete="off" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.email.id" placeholder="jhon@outlook.com" v-model="formData.email.value"/>
+                    <div class="invalid-feedback" :id="`${formData.email.id}-feedback`"></div>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message:</label>
                     <textarea class="form-control" name="message" @input="realTimeValidation" @focusout="realTimeValidation" :id="formData.message.id" v-model="formData.message.value" rows="5"></textarea>
+                    <div class="invalid-feedback" :id="`${formData.message.id}-feedback`"></div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100" >Submit</button>
             </form>
@@ -47,14 +50,14 @@ const submitToFormspree = () => {
 </template>
 
 <style scoped>
+.invalid-feedback{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 label{
     font-size: 1rem;
 }
 
-
-input.placeholder-error::placeholder,textarea.placeholder-error::placeholder{
-    color:red;
-}
 .contact-container,input{
     font-size: 0.8rem;
 }

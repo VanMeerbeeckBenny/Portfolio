@@ -3,21 +3,23 @@ var isSubmit = false;
 export function setValidClass(id){
     let input = document.getElementById(id)
     input.classList.remove('is-invalid')
-    input.classList.add('is-valid')
-    input.classList.remove('placeholder-error')
-    input.placeholder = ``  
+    input.classList.add('is-valid') 
 }
 
 export function setInvalidClass(id){
-    let input = document.getElementById(id)      
+    let input = document.getElementById(id)        
     input.classList.remove('is-valid')
     input.classList.add('is-invalid')
-    input.classList.add('placeholder-error')
-    input.placeholder = `Please provide a ${id}`
+}
+
+export function createUIErrorFeedback(id,errorMessage){    
+    setInvalidClass(id)
+    let errorBox = document.getElementById(`${id}-feedback`) 
+    errorBox.innerHTML = errorMessage 
 }
 
 export function isEmpty(value){    
-    if(value === '')return true
+    if(value.trim() === '' || typeof(value) === 'undefined')return true
     else return false
 }
 
@@ -28,12 +30,26 @@ export function isValidEmail(value) {
  
 }
 
-export function realTimeValidation(e){      
-    if(isSubmit){
-        if(isEmpty(e.target.value) || !isValidEmail(e.target.value) && e.target.id === 'email')setInvalidClass(e.target.id)
-        else setValidClass(e.target.id)        
-    }    
+function validate(id,value){
+    let isValid = true  
+    let errorMessage = ''
+    if(isEmpty(value)) {
+        errorMessage = `${id} can not be empty.`         
+        createUIErrorFeedback(id,errorMessage)
+        isValid = false
+    }        
+    else if(!isValidEmail(value) && id === 'email'){            
+        errorMessage = `Please provide a valid ${id}.`
+        createUIErrorFeedback(id,errorMessage) 
+        isValid = false
+    } 
+    else setValidClass(id) 
+    return isValid;
 }
+export function realTimeValidation(e){      
+    if(isSubmit) validate(e.target.id,e.target.value)        
+}
+
 /**
  * make sure the object formdata has objects inside with an id equel to your input element id
  * like this:
@@ -50,18 +66,9 @@ export function realTimeValidation(e){
 */
 export function validateOnSubmit(formData){
     let isValid = true
-    isSubmit = true;
+    isSubmit = true;   
     for(let key in formData ){        
-        if(isEmpty(formData[key].value)) {
-            setInvalidClass(formData[key].id)
-            isValid = false
-        }
-        else setValidClass(formData[key].id)
-        if(!isValidEmail(formData[key].value) && formData[key].id === 'email'){
-            isValid = false
-            setInvalidClass(formData[key].id)   
-        }     
-    }
-    
+        isValid = validate(formData[key].id,formData[key].value)   
+    }    
     return isValid
 }
