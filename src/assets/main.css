@@ -67,10 +67,6 @@ font-size: 1.3rem;
 }
 
 @media (min-width: 1024px) {
-  .tech-stack{
-    width: 50%;
-    font-size: 1rem;
-}   
 ::-webkit-scrollbar {
   width: 10px;
 }
