@@ -2,6 +2,7 @@
 
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue';
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
+const githubLink = "https://github.com/VanMeerbeeckBenny/CricketDarts";
 const toolsUsed = ["C#","VS","Blazor","Signal-R","Github","MS-SQL"]
 </script>
 
@@ -9,7 +10,7 @@ const toolsUsed = ["C#","VS","Blazor","Signal-R","Github","MS-SQL"]
    <ProjectPresentationTemplate :tools-used="toolsUsed"
                                 header-text="Blazor Cricketdarts"
                                 :video-clip-link= videoLink
-                                repository-link="https://github.com/VanMeerbeeckBenny/CricketDarts"
+                                :repository-link=githubLink
                                 return-route-name="c-project-page">
 
     
