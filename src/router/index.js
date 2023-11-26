@@ -59,6 +59,11 @@ const router = createRouter({
       name:'project-memmoryHelper',
       component: () => import('../views/projects/MemmoryHelperView.vue')
     },
+    {
+      path:'/cricketDarts',
+      name:'project-cricketDarts',
+      component:() => import('../views/projects/BlazorCricketdartVue.vue')
+    }
   ], 
 })
 
