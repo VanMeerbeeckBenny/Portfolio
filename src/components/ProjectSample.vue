@@ -11,7 +11,7 @@ const props = defineProps({
                 :src= props.videoClipLink               
                 allowfullscreen>
         </iframe>
-        <p>Take a look at the source code <a :href=props.repositoryLink>here</a></p>
+        <p class="github-ref">Take a look at the source code <a :href=props.repositoryLink>here</a></p>
     </div>
 </template>
 
@@ -23,6 +23,9 @@ a{
     font-size: 1.1rem;    
 }
 
+p.github-ref{
+    color:rgb(150, 149, 149);
+}
 
 iframe{
     margin-top:30px;
