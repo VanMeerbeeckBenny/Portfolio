@@ -11,7 +11,7 @@ const props = defineProps({
                 :src= props.videoClipLink               
                 allowfullscreen>
         </iframe>
-        <p class="github-ref">Take a look at the source code <a :href=props.repositoryLink>here</a></p>
+        <p class="github-ref">Take a look at the source code <a target="_blank" :href=props.repositoryLink>here</a></p>
     </div>
 </template>
 
