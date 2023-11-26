@@ -13,7 +13,7 @@ const props = defineProps({
     <main>    
         <article class="d-flex flex-column" id="project-detail">            
        
-                <div class="custom-container">
+                <div class="info-container">
                     <h1>{{ props.headerText }}</h1>
                     <div v-if="props.videoClipLink">
                         <ProjectSample :video-clip-link= props.videoClipLink
@@ -26,7 +26,7 @@ const props = defineProps({
                 </div>
                 
 
-                <div class="custom-container color" v-if="$slots['info-section']">
+                <div class="info-container color" v-if="$slots['info-section']">
                     <section class="tech-stack">
                         <h4 class="">Project info</h4>
                         <slot name="info-section"></slot>
@@ -51,7 +51,7 @@ export default {
 <style scoped>
 
 
-.custom-container{
+.info-container{
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ export default {
 .tech-stack{
   word-wrap: break-word;
   font-size: 0.8rem;
-  max-width: 80%;
+  max-width: 50%;
 }
 .color{
     background-color: rgba(200, 199, 199, 0.261);
@@ -80,5 +80,10 @@ h4{
  text-decoration: underline;
  color: rgba(255, 255, 255, 0.81);
 }
-
+@media (min-width: 1024px) {
+.tech-stack{
+max-width: 30%;
+font-size: 1.5rem !important;
+} 
+}
 </style>
