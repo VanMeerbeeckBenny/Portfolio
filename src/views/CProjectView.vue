@@ -10,6 +10,7 @@ const colorClass = "c-sharp-overlay-color"
 
 const APIRouteName = 'project-API';
 const memmoryHelperRouteName = 'project-memmoryHelper';
+const CricketDartsRouteName = 'project-cricketDarts';
 </script>
 
 <template>
@@ -31,7 +32,8 @@ const memmoryHelperRouteName = 'project-memmoryHelper';
                  project-name="Cricketdarts"
                  :picture-path= CricketPath 
                  title-and-alt="Blazor Crickerdarts"
-                 :style-class= colorClass />
+                 :style-class= colorClass 
+                 :route-name= CricketDartsRouteName />
 
     <ProjectCard project-type="Blazor"
                  project-name="Spoticlone"
