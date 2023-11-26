@@ -10,7 +10,8 @@ const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
    <ProjectPresentationTemplate :tools-used="toolsUsed"
                                 header-text="Xamarin Memmory Helper"
                                 :video-clip-link= videoLink
-                                repository-link="#" >
+                                repository-link="#"
+                                return-route-name="c-project-page">
 
     
     <template #info-section>                       
@@ -19,10 +20,6 @@ const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
         <p class="stack-item">User Management:</p><p class="details">A custom table within the Realtime Database features a userId column, aligning with the User ID (UID) found in the corresponding row from Firebase Authentication.</p>
         <p class="stack-item">Authentication & Authorization:</p><p class="details"> Firebase Authentication</p>
         <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>  
-    </template>
-    
-    <template #return-button>
-        <ReturnButton pageName="c-project-page"></ReturnButton>
-    </template>
+    </template> 
    </ProjectPresentationTemplate>
 </template>
