@@ -14,7 +14,7 @@ const toolsUsed = ["C#","VS","CSS","MS-SQL","Swagger","Github"]
                                 return-route-name="c-project-page"> 
  
     <template #info-section>                 
-        <p class="stack-item">Framework:</p><p class="details">Built on Microsoft's ASP.NET Core 5</p>
+        <p class="stack-item">Framework:</p><p class="details">Built on Microsoft's ASP.NET Core</p>
         <p class="stack-item">Database:</p><p class="details"> Microsoft SQL Server</p>                
         <p class="stack-item">API Documentation:</p><p class="details"> Swagger UI</p>
         <p class="stack-item">User Management:</p><p class="details"> ASP.NET Identity Framework</p>
