@@ -63,6 +63,11 @@ const router = createRouter({
       path:'/cricketDarts',
       name:'project-cricketDarts',
       component:() => import('../views/projects/BlazorCricketdartVue.vue')
+    },
+    {
+      path:'/spoticlone',
+      name:'project-spoticlone',
+      component:()=> import('../views/projects/BlazorSpoticloneVue.vue')
     }
   ], 
 })
