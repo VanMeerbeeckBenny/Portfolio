@@ -2,16 +2,16 @@
 import ProjectCard from '../components/ProjectCard.vue'
 
 
-const ApiPath = '/assets/Images/api-screenshot.PNG';
-const XamarinPath = '/assets/Images/xamarin-screenshot.PNG';
-const CricketPath = '/assets/Images/cricketdarts-screenshot.PNG';
-const SpoticlonePath = '/assets/Images/spoticlone-screenshot.PNG';
+const ApiPath = '/assets/Images/api-screenshot.PNG'
+const XamarinPath = '/assets/Images/xamarin-screenshot.PNG'
+const CricketPath = '/assets/Images/cricketdarts-screenshot.PNG'
+const SpoticlonePath = '/assets/Images/spoticlone-screenshot.PNG'
 const colorClass = "c-sharp-overlay-color"
 
-const APIRouteName = 'project-API';
-const memmoryHelperRouteName = 'project-memmoryHelper';
-const cricketDartsRouteName = 'project-cricketDarts';
-const spotiCloneRouteName = 'project-spoticlone';
+const APIRouteName = 'project-API'
+const memmoryHelperRouteName = 'project-memmoryHelper'
+const cricketDartsRouteName = 'project-cricketDarts'
+const spotiCloneRouteName = 'project-spoticlone'
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup>
 
-import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue';
-const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
+import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue'
+const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8"
 const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
 </script>
 

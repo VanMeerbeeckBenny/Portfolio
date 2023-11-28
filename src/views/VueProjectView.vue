@@ -1,9 +1,7 @@
 <script setup>
 import ProjectCard from '../components/ProjectCard.vue'
-
-const Portfolio = '/assets/Images/portfolio-screenshot.PNG';
-const CocktalVue = '/assets/Images/cocktail-vue-screenshot.PNG';
-
+const Portfolio = '/assets/Images/portfolio-screenshot.PNG'
+const CocktalVue = '/assets/Images/cocktail-vue-screenshot.PNG'
 const colorClass = "vue-overlay-color"
 </script>
 
