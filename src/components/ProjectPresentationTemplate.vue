@@ -21,12 +21,11 @@ const props = defineProps({
                         <ProjectSample :video-clip-link= props.videoClipLink
                                        :repository-link= props.repositoryLink />
                     </div>  
-                    <div v-else>                   
+                    <div class="main-info-container" v-else>                   
                         <slot name="project-main-info"></slot>                
                     </div>                  
                     <ToolsUsed :tools= props.toolsUsed />                    
-                </div>
-                
+                </div>   
 
                 <div class="info-container color" v-if="$slots['info-section']">
                     <section class="tech-stack">
@@ -61,6 +60,11 @@ export default {
     align-items: center; 
    
 }
+.main-info-container{
+    margin-top: 20px;
+    max-width: 70%;
+}
+
 .tech-stack{
   word-wrap: break-word;
   font-size: 0.8rem;
@@ -87,5 +91,10 @@ h4{
 max-width: 30%;
 font-size: 1.5rem !important;
 } 
+
+.main-info-container{
+    margin-top: 20px;
+    max-width: 70%;
+}
 }
 </style>
