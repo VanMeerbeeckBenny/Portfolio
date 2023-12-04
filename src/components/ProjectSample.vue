@@ -1,4 +1,5 @@
 <script setup>
+
 const props = defineProps({
     videoClipLink:String,
     repositoryLink:String
@@ -10,22 +11,13 @@ const props = defineProps({
         <iframe 
                 :src= props.videoClipLink               
                 allowfullscreen>
-        </iframe>
-        <p class="github-ref">Take a look at the source code <a target="_blank" :href=props.repositoryLink>here</a></p>
+        </iframe>        
     </div>
 </template>
 
 <style scoped>
 
-a{    
-    color:rgba(240, 75, 75, 0.651);    
-    text-decoration: underline;  
-    font-size: 1.1rem;    
-}
 
-p.github-ref{
-    color:rgb(150, 149, 149);
-}
 
 iframe{
     margin-top:30px;
