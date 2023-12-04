@@ -7,7 +7,7 @@ const props =defineProps({
 <template>
     <section class="tools-container">
         <h4>Tools used :</h4>
-        <div class="d-flex flex-row flex-wrap">      
+        <div class="d-flex flex-row flex-wrap justify-content-center">      
             <span v-for="tool in props.tools" :key="tool" class="tool d-flex align-content-center justify-content-center"> {{ tool }} </span>
         </div>
     </section>
