@@ -27,7 +27,7 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Mario-inspired-game"
                 As this project was created in school where legal issues were not a concern, I used many original assets. Due to copyright laws, all assets have been removed. Consequently, the game cannot be run, but you can explore the code.
             </p>
             <p>
-                If you wish to see a working demonstration, please feel free to contact me.
+                If you wish to see a working sample or a video of the game, please feel free to contact me.
             </p>
         </section>
         <githubComponent :repositoryLink = githubLink></githubComponent>
