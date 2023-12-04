@@ -17,8 +17,7 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Mario-inspired-game"
 
             <p>One distinctive aspect is Mario's use of cannon bullets instead of the traditional fireball. These bullets move linearly and are visibly managed in the interface at the bottom right corner. Players are limited to five bullets, which slowly regenerate. Collecting a flower while able to shoot refills the bullet count.</p>
 
-            <p>The game hase two levels where each level end with the wel know castle.I left out the flag as i did not have enought time.
-                There is a credit screen when you finisch the game with a nice remix of A mario song.
+            <p>The game has two levels, each ending with the well-known castle. I left out the flag as I did not have enough time. There is a credit screen when you finish the game with a nice remix of a Mario song.
             </p>            
         </section>
         <br >
