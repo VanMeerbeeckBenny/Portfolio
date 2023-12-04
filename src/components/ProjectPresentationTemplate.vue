@@ -1,5 +1,6 @@
 <script setup>
-import ToolsUsed from './ToolsUsed.vue';
+import Githublink from './githubLink.vue'
+import ToolsUsed from './toolsUsed.vue'
 import ProjectSample from './ProjectSample.vue';
 import ReturnButton from './ReturnButton.vue';
 const props = defineProps({
@@ -17,13 +18,14 @@ const props = defineProps({
        
                 <div class="info-container">
                     <h1>{{ props.headerText }}</h1>
-                    <div v-if="props.videoClipLink">
-                        <ProjectSample :video-clip-link= props.videoClipLink
-                                       :repository-link= props.repositoryLink />
-                    </div>  
-                    <div class="main-info-container" v-else>                   
+                    <section v-if="props.videoClipLink">
+                        <ProjectSample :video-clip-link= props.videoClipLink />
+                        <Githublink :repository-link=props.repositoryLink /> 
+                    </section> 
+                    
+                    <section class="main-info-container" v-else>                   
                         <slot name="project-main-info"></slot>                
-                    </div>                  
+                    </section>                  
                     <ToolsUsed :tools= props.toolsUsed />                    
                 </div>   
 
@@ -53,6 +55,7 @@ export default {
 
 
 .info-container{
+    margin-top: 70px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -87,6 +90,9 @@ h4{
  color: rgba(255, 255, 255, 0.81);
 }
 @media (min-width: 1024px) {
+.info-container{
+    margin-top: 0px;
+}
 .tech-stack{
 max-width: 30%;
 font-size: 1.5rem !important;
