@@ -37,9 +37,7 @@ a,
 }
 
 .details{  
-  line-height: 15px;  
-  color:rgba(255, 255, 255, 0.677);
-  
+  line-height: 15px;
 }
 
 .stack-item {
@@ -51,9 +49,12 @@ a,
 }
 p,span{
   font-size: 0.8rem;
+  
 }
-
-h2,h3,h4{
+p,span,h2,h3,h4,h5{
+  color: rgba(255, 255, 255, 0.806);
+}
+h2,h3,h4,h5{
 font-size: 1.3rem;
 }
 @media(min-width:700px){  
