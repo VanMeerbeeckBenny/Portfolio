@@ -91,7 +91,7 @@ h4{
 }
 @media (min-width: 1024px) {
 .info-container{
-    margin-top: 0px;
+    margin-top: 10px;
 }
 .tech-stack{
 max-width: 30%;
