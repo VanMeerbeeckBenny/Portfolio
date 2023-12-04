@@ -68,6 +68,11 @@ const router = createRouter({
       path:'/spoticlone',
       name:'project-spoticlone',
       component:()=> import('../views/projects/BlazorSpoticloneVue.vue')
+    },
+    {
+      path:'/MarioInspiredGame',
+      name:'project-Mario-inspired-Game',
+      component: () => import('../views/projects/PygameView.vue')
     }
   ], 
 })
