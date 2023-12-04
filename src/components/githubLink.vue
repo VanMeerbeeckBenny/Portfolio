@@ -12,11 +12,6 @@ const props = defineProps({
 <style scoped>
 a{    
     color:rgba(240, 75, 75, 0.651);    
-    text-decoration: underline;  
-    font-size: 1.1rem;    
-}
-
-p.github-ref{
-    color:rgb(150, 149, 149);
+    text-decoration: underline;   
 }
 </style>
