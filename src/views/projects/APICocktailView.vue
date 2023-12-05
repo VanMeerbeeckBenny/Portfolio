@@ -2,7 +2,7 @@
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue';
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8";
 const githubLink = "https://github.com/VanMeerbeeckBenny/Cocktail-API-public";
-const toolsUsed = ["C#","VS","CSS","MS-SQL","Swagger","Github"]
+const toolsUsed = ["C#","VS","MS-SQL","Swagger","Github"]
 
 </script>
 

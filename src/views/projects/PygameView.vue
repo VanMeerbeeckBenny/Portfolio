@@ -1,7 +1,7 @@
 <script setup>
 import ProjectPresentationTemplate from "../../components/ProjectPresentationTemplate.vue"
 import githubComponent from "../../components/githubLink.vue"
-const toolsUsed = ["Python","VSCode","Pygame","Pymonk","Github","MiniConda","Tiled"]
+const toolsUsed = ["Python","VSCode","Github","MiniConda","Tiled"]
 const githubLink = "https://github.com/VanMeerbeeckBenny/Mario-inspired-game"
 </script>
 
@@ -53,10 +53,7 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Mario-inspired-game"
     color:rgba(255, 255, 255, 0.558);  
 }
 
-@media (min-width: 1024px){
-    #legal{
-        width: 90%;
-    }
+@media (min-width: 1024px){    
     #legal p {
         font-size: 0.8rem;        
     }

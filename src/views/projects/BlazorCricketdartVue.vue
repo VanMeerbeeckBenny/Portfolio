@@ -3,7 +3,7 @@
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue'
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8"
 const githubLink = "https://github.com/VanMeerbeeckBenny/CricketDarts"
-const toolsUsed = ["C#","VS","Blazor","Signal-R","Github","MS-SQL"]
+const toolsUsed = ["C#","Bootstrap","VS","Blazor","Signal-R","Github","MS-SQL"]
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 
 import ProjectPresentationTemplate from "../../components/ProjectPresentationTemplate.vue"
 const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8"
-const toolsUsed = ["C#","VS","Blazor","Github","MS-SQL"]
+const toolsUsed = ["C#","Bootstrap","VS","Blazor","Github","MS-SQL"]
 const githubLink = "https://github.com/VanMeerbeeckBenny/Spoticlone"
 </script>
 
