@@ -26,7 +26,10 @@ const props = defineProps({
                     <section class="main-info-container" v-else>                   
                         <slot name="project-main-info"></slot>                
                     </section>                  
-                    <ToolsUsed :tools= props.toolsUsed />                    
+                    <ToolsUsed :tools= props.toolsUsed />   
+                    <div class="d-flex justify-content-center mt-2" v-if="!$slots['info-section']">
+                        <ReturnButton :pageName=returnRouteName></ReturnButton>
+                    </div>              
                 </div>   
 
                 <div class="info-container color" v-if="$slots['info-section']">
