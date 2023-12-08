@@ -50,29 +50,39 @@ const router = createRouter({
       component:() => import('../views/ContactView.vue')
     },
     {
-      path:'/API',
+      path:'/projects/c/API',
       name:'project-API',
       component: () => import('../views/projects/APICocktailView.vue')
     },
     {
-      path:'/memmoryHelper',
+      path:'/projects/c/memmoryHelper',
       name:'project-memmoryHelper',
       component: () => import('../views/projects/MemmoryHelperView.vue')
     },
     {
-      path:'/cricketDarts',
+      path:'/projects/c/cricketDarts',
       name:'project-cricketDarts',
       component:() => import('../views/projects/BlazorCricketdartVue.vue')
     },
     {
-      path:'/spoticlone',
+      path:'/projects/c/spoticlone',
       name:'project-spoticlone',
       component:()=> import('../views/projects/BlazorSpoticloneVue.vue')
     },
     {
-      path:'/MarioInspiredGame',
+      path:'/projects/python/MarioInspiredGame',
       name:'project-Mario-inspired-Game',
       component: () => import('../views/projects/PygameView.vue')
+    },
+    {
+      path:'/projects/javascript/numeral-converter',
+      name:'project-numeral-converter',
+      component:()=>import('../views/projects/NumeralConverterView.vue')
+    },
+    {
+      path:'/projects/javascript/wiki-game-of-thrones',
+      name:'project-wiki-game-of-thrones',
+      component:()=>import('../views/projects/WikiGameOfThronesView.vue')
     }
   ], 
 })
