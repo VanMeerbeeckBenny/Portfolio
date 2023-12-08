@@ -83,6 +83,11 @@ const router = createRouter({
       path:'/projects/javascript/wiki-game-of-thrones',
       name:'project-wiki-game-of-thrones',
       component:()=>import('../views/projects/WikiGameOfThronesView.vue')
+    },
+    {
+      path:'/projects/vue/cocktail',
+      name:'project-vue-cocktail',
+      component:()=>import('../views/projects/VueCocktailView.vue')
     }
   ], 
 })

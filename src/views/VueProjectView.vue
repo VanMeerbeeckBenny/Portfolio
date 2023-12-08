@@ -9,7 +9,8 @@ const colorClass = "vue-overlay-color"
     <ProjectCard project-name="Cocktails"
                  :picture-path= CocktalVue 
                  title-and-alt="Cocktails"
-                 :style-class= colorClass />
+                 :style-class= colorClass
+                 route-name="project-vue-cocktail" />
     
     <ProjectCard project-name="Portfolio"
                  :picture-path= Portfolio 
