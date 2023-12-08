@@ -22,5 +22,3 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Cocktail-Vue-public"
     </template> 
    </ProjectPresentationTemplate>
 </template>
-<style scoped>
-</style>

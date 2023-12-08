@@ -23,5 +23,3 @@ const githubLink = "https://github.com/VanMeerbeeckBenny/Spoticlone"
     </template> 
    </ProjectPresentationTemplate>
 </template>
-<style scoped>
-</style>
