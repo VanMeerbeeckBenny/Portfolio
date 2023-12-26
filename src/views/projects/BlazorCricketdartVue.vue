@@ -1,7 +1,7 @@
 <script setup>
 
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue'
-const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8"
+const videoLink ="https://www.youtube.com/embed/58JqAlEwzMg"
 const githubLink = "https://github.com/VanMeerbeeckBenny/CricketDarts"
 const toolsUsed = ["C#","Bootstrap","VS","Blazor","Signal-R","Github","MS-SQL"]
 </script>
