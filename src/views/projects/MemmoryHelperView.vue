@@ -1,7 +1,7 @@
 <script setup>
 
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue'
-const videoLink ="https://www.youtube.com/embed/itQLBGQyTX8"
+const videoLink ="https://www.youtube.com/embed/AVQmx8AjCrI"
 const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
 </script>
 
@@ -15,7 +15,8 @@ const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
     
     <template #info-section>                       
         <p class="stack-item">Framework:</p><p class="details">Xamarin (.NET Core) with FreshMvvm</p>       
-        <p class="stack-item">Database:</p><p class="details"> Firebase Realtime Database</p>                     
+        <p class="stack-item">Database:</p><p class="details"> Firebase Realtime Database</p>    
+        <p class="stack-item">Image storage:</p><p class="details"> Firebase Storage</p>                    
         <p class="stack-item">User Management:</p><p class="details">A custom table within the Realtime Database features a userId column, aligning with the User ID (UID) found in the corresponding row from Firebase Authentication.</p>
         <p class="stack-item">Authentication & Authorization:</p><p class="details"> Firebase Authentication</p>
         <p class="stack-item">Dependency Injection:</p><p class="details"> Enhanced code flexibility and maintainability</p>  
