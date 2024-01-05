@@ -1,13 +1,13 @@
 <script setup>
 
 import ProjectPresentationTemplate from '../../components/ProjectPresentationTemplate.vue'
-const videoLink ="https://www.youtube.com/embed/AVQmx8AjCrI"
+const videoLink ="https://www.youtube.com/embed/MeC8VHL9eNE"
 const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
 </script>
 
 <template>
    <ProjectPresentationTemplate :tools-used="toolsUsed"
-                                header-text="Xamarin Memmory Helper"
+                                header-text="Xamarin Memory Helper"
                                 :video-clip-link= videoLink
                                 repository-link="#"
                                 return-route-name="c-project-page">
