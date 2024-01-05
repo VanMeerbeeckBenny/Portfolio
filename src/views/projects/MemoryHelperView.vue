@@ -9,7 +9,7 @@ const toolsUsed = ["C#","VS","FreshMvvm","Firebase","Github"]
    <ProjectPresentationTemplate :tools-used="toolsUsed"
                                 header-text="Xamarin Memory Helper"
                                 :video-clip-link= videoLink
-                                repository-link="#"
+                                repository-link="https://github.com/VanMeerbeeckBenny/mobile-memory-helper-public"
                                 return-route-name="c-project-page">
 
     

@@ -57,7 +57,7 @@ const router = createRouter({
     {
       path:'/projects/c/memmoryHelper',
       name:'project-memmoryHelper',
-      component: () => import('../views/projects/MemmoryHelperView.vue')
+      component: () => import('../views/projects/MemoryHelperView.vue')
     },
     {
       path:'/projects/c/cricketDarts',
